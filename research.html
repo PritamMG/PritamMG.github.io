@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Pritam Gharat</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Personal homepage of Pritam Gharat, Research Associate at Imperial College." />
+<link href="new-style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="lastVisit.js"></script>
+
+</head>
+
+<body class="bg9">
+
+<div class="bg8" id="header"> 
+<div id="headerright">
+<h1>Pritam Gharat</h1>
+<h3>Postdoc Researcher</h3>
+<h4>Microsoft Research India</h4>
+</div>
+</div>
+
+
+<div id="content">
+<h2>My Ph.D. Work</h2>
+<br>
+<ul>
+<li><a class="text6" >Topic</a> 
+<li><br/>Generalized Points-to Graphs: A New Abstraction of Memory in Presence of Pointers</li>
+<br>
+<li><a class="text6">What is that?</a> <br>
+<li><br/> A new form of bottom-up procedure summaries, called the generalized points-to graphs (GPGs) for a precise and scalable 
+    flow- and context-sensitive points-to analysis.
+</li>
+<br>
+<li><a class="text6">More details</a> <br>
+<li><p>GPGs can represent both memory transformers that summarize the effect of a procedure and
+the resulting memory in terms of points-to relations. A GPG contains GPUs (generalized points-to updates)
+representing individual memory updates along with the control flow between them.</p>
+<p>A GPG
+views points-to relations as memory updates and generalizes them using the counts of indirection levels leaving the unknown
+pointees implicit. GPGs are
+compact; their compactness is achieved by a careful choice of a suitable representation and a series
+of optimizations: strength reduction reduces the indirection levels, redundancy elimination removes
+redundant memory updates and minimizes control flow (without over-approximating data dependence between memory updates), 
+and call inlining enhances the opportunities of these optimizations. </p>
+<p>
+We devise novel
+operations such as GPU composition and GPU reduction and data flow analyses such as reaching GPUs analysis and coalescing analysis 
+for these optimizations. These optimizations are 
+similar to the optimizations performed by compilers. <p/>
+<p>Essentially, these optimizations
+eliminate the data dependence between memory updates by rewriting the memory updates thereby
+discarding redundant control flow whenever possible.
+The picture below describes the various abstractions, operations, analyses, and optimizations used along with their dependences
+between each other.</p>
+<div class="center"><p><img src="images/big-picture-gpg.v4.cropped.png" width="800px" height="750px"/></p></div>
+</li>
+</ul>
+
+
+</div>
+
+</body>
+</html>

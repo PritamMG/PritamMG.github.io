@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Pritam Gharat</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Personal homepage of Pritam Gharat, Research Associate at Imperial College." />
+<link href="new-style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="lastVisit.js"></script>
+
+</head>
+
+<body class="bg9">
+
+<div class="bg8" id="header"> 
+<div id="headerright">
+<h1>Pritam Gharat</h1>
+<h3>Postdoc Researcher</h3>
+<h4>Microsoft Research India</h4>
+</div>
+</div>
+
+
+<div id="content">
+<h2>My Work at Imperial</h2>
+<br>
+<ul>
+<li><a class="text6" >Topic</a> 
+<li><br/>Combining Static Analysis Error Traces with Dynamic Symbolic Execution</li>
+<br>
+<li><a class="text6">More details</a> <br>
+<li><p>We propose an approach to automate the process of confirming potential bugs reported by static analysis.
+Given a bug report from a static analysis tool, we use <em>dynamic symbolic execution (DSE)</em> to try to automatically generate an input that triggers the reported bug.
+</p>
+<p>More precisely, our technique works as follows.
+Suppose a static analyser reports a possible bug at a given program location.
+The analyser typically yields a <em>trace</em> providing (possibly incomplete) details of a path through the program that, if followed, might trigger the bug.
+Our idea is to then apply a DSE tool to the program, additionally providing the DSE tool with information related to the trace.
+Rather than attempting to explore <em>all</em> paths of the program in the hope of finding <em>some</em> bug, the DSE tool exploits the trace to explore a massively-pruned subset of paths that agree with the trace, with the aim of confirming the <em>specific</em> bug reported by the static analyser.
+Our hypothesis is that---if the bug turns out to be a true positive---the DSE tool may be able to confirm the bug, producing an associated triggering test case, more efficiently than if it were run on the program in a default, undirected fashion.
+If the DSE tool is unable to trigger the bug then we still don't know whether the bug report is a true or a false positive (except in the extreme case where DSE is able to fully explore the program), but we can de-prioritize that report in favour of other reports that are confirmed.<p>
+<p/>
+<p>We present a general strategy for integrating a DSE tool with a trace-producing static analyser via a new intrinsic function, klee_assume_sa, that allows the sequence of steps of the static analysis trace to be encoded in the program under analysis, together with conditions that the static analyser believes should hold at each step.
+We propose three strategies for handling the conditions associated with calls to klee_assume_sa: <em>ignore</em>, which treats these conditions as no-ops; <em>require</em>, which aggressively prunes the search space by terminating exploration of a path as soon as a condition is found to be infeasible; and <em>try</em>, which adds a feasible condition to the current path condition but ignores it otherwise.
+We also propose a novel search heuristic that uses the klee_assume_sa functions associated with a static analysis trace to prioritise exploration of paths that follow the trace.</p>
+</li>
+</ul>
+
+
+</div>
+
+</body>
+</html>
